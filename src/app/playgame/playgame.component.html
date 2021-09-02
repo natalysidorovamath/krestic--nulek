@@ -1,0 +1,84 @@
+
+	<div id="game" class = "container" style="padding-top: 100px;">
+        <div class="row" >
+            <div class= "col-xs-12">
+                <div class="table">
+                    <table cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td>
+                                <div class="inner"(click)="clickTd(0)">
+                                    <div *ngIf="rows[0]">X</div>
+                                    <div *ngIf="rowsSecond[0]">O</div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="inner" (click)="clickTd(1)">
+                                    <div *ngIf="rows[1]">X</div>
+                                    <div *ngIf="rowsSecond[1]">O</div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="inner" (click)="clickTd(2)">
+                                    <div *ngIf="rows[2]">X</div>
+                                    <div *ngIf="rowsSecond[2]">O</div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="inner" (click)="clickTd(3)">
+                                    <div *ngIf="rows[3]">X</div>
+                                    <div *ngIf="rowsSecond[3]">O</div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="inner"(click)="clickTd(4)">
+                                    <div *ngIf="rows[4]">X</div>
+                                    <div *ngIf="rowsSecond[4]">O</div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="inner"(click)="clickTd(5)">
+                                    <div *ngIf="rows[5]">X</div>
+                                    <div *ngIf="rowsSecond[5]">O</div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="inner" (click)="clickTd(6)">
+                                    <div *ngIf="rows[6]">X</div>
+                                    <div *ngIf="rowsSecond[6]">O</div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="inner" (click)="clickTd(7)">
+                                    <div *ngIf="rows[7]">X</div>
+                                    <div *ngIf="rowsSecond[7]">O</div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="inner" (click)="clickTd(8)">
+                                    <div *ngIf="rows[8]">X</div>
+                                    <div *ngIf="rowsSecond[8]">O</div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                    <div class="winning"></div>
+                </div>
+            </div>
+
+        </div>
+		
+        <div class ="row" style="padding-top: 30px;">
+            <div class= "col-xs-12">
+            <button class ="btn btn-primary"(click)="checkResult()"> Get result</button>
+            <span *ngIf="resultGame">{{resultGame}}</span>
+            </div>
+        </div>
+		<div id="win_block">
+			<span class="winner"></span>
+			<span class="again">Играть еще!</span>
+		</div>
+	</div>
